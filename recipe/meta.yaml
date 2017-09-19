@@ -1,7 +1,7 @@
 {% set name = "pydl" %}
-{% set version = "0.5.4" %}
+{% set version = "0.6.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "9995681ef072b57a49886cfb81740532a8a94d4ad98ac3e81a722a2f7f803cd2" %}
+{% set hash_value = "74d576b5018d585a0fc533232b69a8e03ba3ee2827e7c000c61d240bfb7cc4be" %}
 
 package:
   name: '{{ name|lower }}'
