@@ -25,6 +25,10 @@ requirements:
     - python
     - pip
     - setuptools
+  build:
+    - python
+    - pip
+    - setuptools
   run:
     - python
     - astropy
