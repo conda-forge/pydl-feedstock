@@ -21,7 +21,7 @@ Current build status
 
 
 <table>
-    
+
   <tr>
     <td>Azure</td>
     <td>
@@ -223,7 +223,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bsipocz](https://github.com/bsipocz/)
 * [@mwcraig](https://github.com/mwcraig/)
 * [@weaverba137](https://github.com/weaverba137/)
-
