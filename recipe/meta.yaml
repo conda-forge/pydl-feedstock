@@ -11,7 +11,7 @@ source:
   'sha256': '8f35c97815b73e1da0cd67b56a051aa9768a88e46a1aad080d23c2a4cdc45b84'
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - get_juldate = pydl.goddard.astro:get_juldate_main
     - hogg_iau_name = pydl.pydlutils.misc:hogg_iau_name_main
