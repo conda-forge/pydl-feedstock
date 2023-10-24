@@ -16,7 +16,11 @@ build:
     - get_juldate = pydl.goddard.astro:get_juldate_main
     - hogg_iau_name = pydl.pydlutils.misc:hogg_iau_name_main
     - compute_templates = pydl.pydlspec2d.spec1d:template_input_main
-  script: {{ PYTHON }} -m pip install . -vv
+  # Note: pip-based install fails due to wanting to download astropy-helpers
+  # Also note: astropy-helpers needs the imp module which has been removed from 3.12.
+  # script: {{ PYTHON }} -m pip install . -vv
+  script: python setup.py install --offline --no-git --single-version-externally-managed --record=files.txt
+  skip: true  # [py>311]
 
 requirements:
   host:
