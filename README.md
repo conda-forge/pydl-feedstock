@@ -3,15 +3,15 @@ About pydl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydl-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/weaverba137/pydl
+Home: https://github.com/weaverba137/pydl
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Summary: Python implementations of some functions from astronomical IDL libraries.
 
-Development: http://github.com/weaverba137/pydl
+Development: https://github.com/weaverba137/pydl
 
-Documentation: http://pydl.readthedocs.org/en/latest/
+Documentation: https://pydl.readthedocs.io/en/latest/
 
 Python replacements for functions that are part of the IDL built-in
 library, or part of astronomical IDL libraries.  The emphasis is on
