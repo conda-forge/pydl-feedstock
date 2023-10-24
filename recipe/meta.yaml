@@ -40,8 +40,8 @@ test:
     - compute_templates --help
 
 about:
-  home: http://github.com/weaverba137/pydl
-  license: BSD 3-clause
+  home: https://github.com/weaverba137/pydl
+  license: BSD-3-Clause
   license_family: BSD
   license_file: licenses/LICENSE.rst
   summary: Python implementations of some functions from astronomical IDL libraries.
@@ -51,8 +51,8 @@ about:
     reproducing results of the astronomical library functions.  Only the bare
     minimum of IDL built-in functions are implemented to support this. pydl is
     an Astropy affiliated package.
-  doc_url: http://pydl.readthedocs.io/en/latest/
-  dev_url: http://github.com/weaverba137/pydl
+  doc_url: https://pydl.readthedocs.io/en/latest/
+  dev_url: https://github.com/weaverba137/pydl
 
 extra:
   recipe-maintainers:
