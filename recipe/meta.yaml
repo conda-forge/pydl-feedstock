@@ -19,8 +19,10 @@ build:
   # Note: pip-based install fails due to wanting to download astropy-helpers
   # Also note: astropy-helpers needs the imp module which has been removed from 3.12.
   # script: {{ PYTHON }} -m pip install . -vv
-  script: python setup.py install --offline --no-git --single-version-externally-managed --record=files.txt
-  skip: true  # [py>311]
+  script:
+    - sed -r -e 's/^import imp$/import importlib as imp/' -i .bak ah_bootstrap.py
+    - python setup.py install --offline --no-git --single-version-externally-managed --record=files.txt
+  # skip: true  # [py>311]
 
 requirements:
   host:
