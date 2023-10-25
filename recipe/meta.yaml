@@ -11,17 +11,24 @@ source:
   'sha256': '8f35c97815b73e1da0cd67b56a051aa9768a88e46a1aad080d23c2a4cdc45b84'
 
 build:
-  number: 5
+  number: 6
   entry_points:
     - get_juldate = pydl.goddard.astro:get_juldate_main
     - hogg_iau_name = pydl.pydlutils.misc:hogg_iau_name_main
     - compute_templates = pydl.pydlspec2d.spec1d:template_input_main
-  script: python setup.py install --offline --single-version-externally-managed --record=record.txt
+  # Note: pip-based install fails due to wanting to download astropy-helpers
+  # Also note: astropy-helpers needs the imp module which has been removed from 3.12.
+  #            It's not worth the effort to try to patch astropy-helpers for 3.12
+  #            for this old version.
+  # script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} setup.py install --offline --no-git --single-version-externally-managed --record=files.txt
+  skip: true  # [py>311]
 
 requirements:
   host:
     - python
     - setuptools
+    - pip
   run:
     - python
     - astropy
@@ -40,8 +47,8 @@ test:
     - compute_templates --help
 
 about:
-  home: http://github.com/weaverba137/pydl
-  license: BSD 3-clause
+  home: https://github.com/weaverba137/pydl
+  license: BSD-3-Clause
   license_family: BSD
   license_file: licenses/LICENSE.rst
   summary: Python implementations of some functions from astronomical IDL libraries.
@@ -51,8 +58,8 @@ about:
     reproducing results of the astronomical library functions.  Only the bare
     minimum of IDL built-in functions are implemented to support this. pydl is
     an Astropy affiliated package.
-  doc_url: http://pydl.readthedocs.org/en/latest/
-  dev_url: http://github.com/weaverba137/pydl
+  doc_url: https://pydl.readthedocs.io/en/latest/
+  dev_url: https://github.com/weaverba137/pydl
 
 extra:
   recipe-maintainers:
