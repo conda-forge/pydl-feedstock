@@ -18,12 +18,11 @@ build:
     - compute_templates = pydl.pydlspec2d.spec1d:template_input_main
   # Note: pip-based install fails due to wanting to download astropy-helpers
   # Also note: astropy-helpers needs the imp module which has been removed from 3.12.
+  #            It's not worth the effort to try to patch astropy-helpers for 3.12
+  #            for this old version.
   # script: {{ PYTHON }} -m pip install . -vv
-  script:
-    - "sed -r -e 's/import imp/import importlib as imp/' -i.bak ah_bootstrap.py"
-    - "sed -r -e 's/import imp/import importlib as imp/' -i.bak astropy_helpers/astropy_helpers/utils.py"
-    - "python setup.py install --offline --no-git --single-version-externally-managed --record=files.txt"
-  # skip: true  # [py>311]
+  script: {{ PYTHON }} setup.py install --offline --no-git --single-version-externally-managed --record=files.txt
+  skip: true  # [py>311]
 
 requirements:
   host:
