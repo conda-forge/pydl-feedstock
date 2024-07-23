@@ -1,5 +1,5 @@
 {% set name = "pydl" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: '{{ name|lower }}'
@@ -8,10 +8,10 @@ package:
 source:
   fn: '{{ name }}-{{ version }}.tar.gz'
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  'sha256': 'b6388837cc3252faec36695e4dd1de44cb4651b412392e55a60195f15a010289'
+  'sha256': '5026e3b80fe413a13d363fbd526abb9107db638710584406243d02870b60087c'
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - get_juldate = pydl.goddard.astro:get_juldate_main
     - hogg_iau_name = pydl.pydlutils.misc:hogg_iau_name_main
