@@ -11,7 +11,7 @@ source:
   'sha256': '5026e3b80fe413a13d363fbd526abb9107db638710584406243d02870b60087c'
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - get_juldate = pydl.goddard.astro:get_juldate_main
     - hogg_iau_name = pydl.pydlutils.misc:hogg_iau_name_main
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python
-    - astropy
+    - astropy-base
     - scipy
     - matplotlib-base
 
